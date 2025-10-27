@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIP GATE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Cinzel:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      :root {
+        --gold: #E0B841;
+        --gold-darker: #C5A335;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Tajawal', sans-serif; /* Default for Arabic */
+        background-color: #0A0A0A;
+        background-image: 
+          radial-gradient(circle at top left, rgba(224, 184, 65, 0.05), transparent 30%),
+          url('https://www.transparenttextures.com/patterns/black-felt.png');
+      }
+      html[lang="en"] body {
+        font-family: 'Lato', sans-serif;
+      }
+      .font-brand {
+        font-family: 'Cinzel', serif;
+      }
+      html[lang="ar"] .font-brand {
+        font-family: 'Tajawal', sans-serif;
+      }
+      /* Fix for letter-spacing on Arabic text which breaks character connection */
+      html[lang="ar"] .tracking-tighter,
+      html[lang="ar"] .tracking-tight,
+      html[lang="ar"] .tracking-wide,
+      html[lang="ar"] .tracking-wider,
+      html[lang="ar"] .tracking-widest {
+        letter-spacing: normal;
+      }
+      .text-shadow-lg { text-shadow: 0 0 20px rgba(0,0,0,0.7); }
+      .bg-glass {
+        background-color: rgba(18, 18, 18, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+      .gold-gradient-text {
+        background: linear-gradient(to right, var(--gold), var(--gold-darker));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "vite": "https://aistudiocdn.com/vite@^7.1.12",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 1000,
+                once: true,
+            });
+        }
+      });
+    </script>
+  </body>
+</html>
